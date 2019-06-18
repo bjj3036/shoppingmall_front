@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import {BrowserRouter, Route, Link} from "react-router-dom";
+import {Provider} from 'mobx-react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.scss';
+
+import Profile from './Profile'
+import stores from './Stores'
+
+class App extends Component {
+    state = {
+        location: 0,
+    };
+
+    render() {
+        return (
+            <Provider stores={stores}>
+                <BrowserRouter>
+                    <header>
+                        <Link to='/profile/register'>회원가입</Link>
+                        <Link to='/profile/login'>로그인</Link>
+                    </header>
+                    <section>
+                        <Route path='/profile/:command?' exact component={Profile}/>
+                    </section>
+                </BrowserRouter>
+            </Provider>
+        );
+    }
 }
 
 export default App;

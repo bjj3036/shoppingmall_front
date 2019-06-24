@@ -1,3 +1,39 @@
-header{
-  height: 40px;
+header {
+  width: 100vw;
+}
+
+ul.header-nav {
+  list-style: none;
+  width: 100%;
+
+  > li {
+    cursor: pointer;
+    float: left;
+    padding: 2px 5px;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    font-size: 1.3em;
+    width: 100px;
+    text-align: center;
+    background-color: #E0E0E0;
+
+    &:first-child {
+      border-left: 1px solid black;
+    }
+
+    &:hover{
+      background-color: #F0F0F0;
+      color: #0000FF;
+      text-decoration: underline;
+    }
+  }
+}
+
+section{
+  width: 100%;
+}
+
+a{
+  text-decoration: none;
 }

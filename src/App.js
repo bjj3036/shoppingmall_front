@@ -8,31 +8,29 @@ import Profile from './Profile'
 import stores from './Stores'
 import Home from './Home'
 import CategoryView from './CategoryView'
+import CategoryNav from './CategoryNav'
+import ProductView from './ProductView'
 
 class App extends Component {
+
     render() {
         return (
             <Provider stores={stores}>
                 <BrowserRouter>
                     <header>
-                        <Link to='/profile/register'>회원가입</Link>
-                        <Link to='/profile/login'>로그인</Link>
-                        <div>
-                            <ul className='header-nav'>
-                                <li>상의(남)</li>
-                                <li>하의(남)</li>
-                                <li>상의(여)</li>
-                                <li>하의(여)</li>
-                                <li>구두</li>
-                                <li>가방</li>
-                                <li>소품</li>
-                            </ul>
+                        <Link to='/'>OOO 쇼핑몰</Link>
+                        <div className='right'>
+                            <Link to='/profile/register'>회원가입</Link>
+                            /
+                            <Link to='/profile/login'>로그인</Link>
                         </div>
+                        <CategoryNav/>
                     </header>
                     <section>
                         <Route path='/' exact component={Home}/>
                         <Route path='/profile/:command?' exact component={Profile}/>
                         <Route path='/category/:id' exact component={CategoryView}/>
+                        <Route path='/product/:id' exact component={ProductView}/>
                     </section>
                 </BrowserRouter>
             </Provider>

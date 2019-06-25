@@ -21,7 +21,7 @@ class Register extends Component {
         if (this.state.goToLogin)
             return <Redirect to='/profile/login'/>
         return (
-            <div>
+            <div className='registerForm'>
                 <div>*희망 아이디: <input value={this.state.account} onChange={this.onAccountChanged}/>(6~10자의 영문 및 숯자 가능하며
                     여백은 사용할 수 없습니다)
                 </div>

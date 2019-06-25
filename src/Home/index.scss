@@ -9,37 +9,38 @@ img.main_visual {
   width: 100%;
 
   .justifyCenter {
-    display: flex;
-    justify-content: space-evenly;
   }
 
   .wrap{
-    flex-wrap: wrap;
   }
 
   p {
     text-align: center;
     width: 100%;
     background-color: #F0F0F0;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
   }
 
   aside.left {
     flex: 1 1;
+    border: 1px solid black;
   }
 
   aside.right {
     flex: 1 1;
+    border: 1px solid black;
 
     div.banner {
       height: 50px;
       background-color: #E0E0E0;
       margin-bottom: 5px;
-      border: 1px solid black;
+      border-bottom: 1px solid black;
     }
   }
 
   section {
     flex: 3 2;
+    border: 1px solid black;
   }
 }

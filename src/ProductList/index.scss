@@ -1,5 +1,9 @@
-.item {
-  width: 100px;
+.item1, .item4 {
+  border: 1px solid black;
+}
+
+.item1 {
+  width: 150px;
 
   img {
     width: 100%;
@@ -8,6 +12,8 @@
 
 .item2 {
   height: 80px;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
 
   img {
     height: 100%;
@@ -20,6 +26,7 @@
 
 .item3 {
   width: 100%;
+  border-bottom: 1px solid black;
 
   img {
     height: 70px;
@@ -43,4 +50,17 @@
   > div {
     display: inline-block;
   }
+}
+
+.productList1, .productList4 {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.productList4 {
+  flex-wrap: wrap;
+}
+
+a {
+  color: black;
 }
